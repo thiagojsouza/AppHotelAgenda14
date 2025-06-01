@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotelAgenda14.MainPage"
+             Title="Check-in Hotel">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Nome do Cliente:" />
+        <Entry x:Name="entryNome" Placeholder="Digite seu nome completo" />
+
+        <Label Text="Data de Entrada:" />
+        <DatePicker x:Name="pickerDataEntrada" Format="dd/MM/yyyy" />
+
+        <Label Text="Tipo de Quarto:" />
+        <Picker x:Name="pickerTipo">
+            <Picker.Items>
+                <x:String>Standard</x:String>
+                <x:String>Executivo</x:String>
+                <x:String>Luxo</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Confirmar Reserva"
+                BackgroundColor="#0077CC"
+                TextColor="White"
+                Clicked="OnConfirmarClicked" />
+    </VerticalStackLayout>
+</ContentPage>
